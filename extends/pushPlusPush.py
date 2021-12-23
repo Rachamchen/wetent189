@@ -8,7 +8,7 @@ def push_text(msg: str, token: str) -> str:
         "title": "cloud189app-action",
         "content": msg.replace(" ", "&nbsp;").replace("\n", "  \n")
     }
-    response = requests.post("http://www.pushplus.plus/send", data=data)
+    response = requests.post("http://www.pushplus.plus/send", json=data)
 
     try:
         j = response.json()
